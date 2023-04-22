@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "347124193653",
+    "project_id": "chat-application-d946a",
+    "storage_bucket": "chat-application-d946a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:347124193653:android:4a95bddfad70038b539b3c",
+        "android_client_info": {
+          "package_name": "com.example.audiochatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "347124193653-j65ush6g3lro5u4g5uofbbg63b4ma7q6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7-NuchMxMZCOJ8Vqj6ZyQ6Bu-f2xgtZw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "347124193653-j65ush6g3lro5u4g5uofbbg63b4ma7q6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
