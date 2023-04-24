@@ -41,12 +41,12 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
   void readLocal() async {
     var a = await FirebaseFirestore.instance.collection('chat').get();
     setState(() {
-      currentUserId = widget.data.id == "YVNPYSeKY0FzZ8OB6Asi"
+      currentUserId = widget.data.id == "2qfjJi0CoXVEbl3S96bP"
           ? a.docs[0].id
           : a.docs[1].id;
     });
     String peerId =
-        widget.data.id != "YVNPYSeKY0FzZ8OB6Asi" ? a.docs[0].id : a.docs[1].id;
+        widget.data.id != "2qfjJi0CoXVEbl3S96bP" ? a.docs[0].id : a.docs[1].id;
     if (currentUserId.compareTo(peerId) > 0) {
       groupChatId = '$currentUserId-$peerId';
     } else {
