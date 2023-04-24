@@ -95,10 +95,6 @@ class _ShimmerEffectState extends State<ShimmerEffect> {
                 ),
                 _widget(loading1, "Follow #30FlutterTips"),
                 _widget(loading2, "On"),
-                _widget(loading3, "YouTube: @gowithflutter"),
-                _widget(loading4, "Github: lakshydeep-14"),
-                _widget(loading5, "Medium: lakshydeep-14"),
-                _widget(loading6, "LinkedIn: lakshydeep-14"),
               ],
             )));
   }

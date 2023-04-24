@@ -27,18 +27,8 @@ class _MyWidgetState extends State<MyWidget> {
               ),
             ),
             Text(
-              " @gowithFlutter",
-              style: context.text.headline1!.copyWith(
-                  color: mainColor.withOpacity(0.89),
-                  fontFamily: GoogleFonts.sansita().fontFamily),
-            ),
-            Text(
               " on",
               style: context.text.headline1,
-            ),
-            Text(
-              " YouTube",
-              style: context.text.headline2,
             ),
             Text(
               " #30FlutterTips",
@@ -65,7 +55,7 @@ class _MyWidgetState extends State<MyWidget> {
                   .copyWith(fontFamily: GoogleFonts.newTegomin().fontFamily),
             ),
             Text(
-              " @lakshydeep-14",
+              " Kundan kumar",
               style: context.text.headline4!
                   .copyWith(fontFamily: GoogleFonts.newTegomin().fontFamily),
             ),

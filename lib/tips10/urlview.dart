@@ -28,7 +28,7 @@ class _URLLauncherWidState extends State<URLLauncherWid> {
 
   //for call
   void call() async {
-    Uri url = Uri(scheme: 'tel', path: '+9779801234567');
+    Uri url = Uri(scheme: 'tel', path: '+123456789');
     if (await canLaunchUrl(url)) {
       await launchUrl(url);
     } else {
@@ -38,7 +38,7 @@ class _URLLauncherWidState extends State<URLLauncherWid> {
 
   //for sending mail
   void mail() async {
-    Uri url = Uri(scheme: 'mailto', path: "lvikramsah@gmail.com");
+    Uri url = Uri(scheme: 'mailto', path: "abc@gmail.com");
     if (await canLaunchUrl(url)) {
       await launchUrl(url);
     } else {
@@ -48,7 +48,7 @@ class _URLLauncherWidState extends State<URLLauncherWid> {
 
   //for sending message
   void msg() async {
-    Uri url = Uri(scheme: 'sms', path: "+9779801234567");
+    Uri url = Uri(scheme: 'sms', path: "+1234567890-");
     if (await canLaunchUrl(url)) {
       await launchUrl(url);
     } else {
@@ -90,8 +90,7 @@ class _URLLauncherWidState extends State<URLLauncherWid> {
             ),
             Center(
               child: IconButton(
-                  onPressed: () =>
-                      profile('https://www.github.com/lakshydeep-14/'),
+                  onPressed: () => profile('https://www.github.com'),
                   icon: Icon(
                     FontAwesomeIcons.github,
                     color: mainColor,
@@ -99,8 +98,7 @@ class _URLLauncherWidState extends State<URLLauncherWid> {
             ),
             Center(
               child: IconButton(
-                  onPressed: () =>
-                      profile('https://www.linkedin.com/in/lakshydeep-14/'),
+                  onPressed: () => profile('https://www.linkedin.com'),
                   icon: Icon(
                     FontAwesomeIcons.linkedin,
                     color: mainColor,
@@ -108,7 +106,7 @@ class _URLLauncherWidState extends State<URLLauncherWid> {
             ),
             Center(
               child: IconButton(
-                  onPressed: () => profile('https://lakshydeep-14.medium.com'),
+                  onPressed: () => profile('https://'),
                   icon: Icon(
                     FontAwesomeIcons.medium,
                     color: mainColor,
@@ -116,8 +114,7 @@ class _URLLauncherWidState extends State<URLLauncherWid> {
             ),
             Center(
               child: IconButton(
-                  onPressed: () =>
-                      profile('https://github.com/lakshydeep-14/30FlutterTips'),
+                  onPressed: () => profile('https://github.com'),
                   icon: Icon(
                     Icons.link,
                     color: mainColor,
