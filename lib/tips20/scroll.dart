@@ -93,7 +93,7 @@ class _ScrollWidgetState extends State<ScrollWidget> {
                 SizedBox(height: 100),
                 Center(
                   child: Text(
-                    "@lakshydeep-14",
+                    "Kundan kumar",
                     style: context.text.headline2!
                         .copyWith(fontWeight: FontWeight.w600),
                     textAlign: TextAlign.justify,

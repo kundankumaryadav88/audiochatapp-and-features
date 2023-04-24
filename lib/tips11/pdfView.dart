@@ -79,7 +79,7 @@ class _PDFViewState extends State<PDFView> {
                     margin: pdfWid.EdgeInsets.symmetric(vertical: 10),
                     color: PdfColors.black,
                   ),
-                  pdfWid.Text("Lakshydeep Vikram",
+                  pdfWid.Text("Kundan kumar",
                       style: pdfWid.TextStyle(
                           fontSize: 25, fontWeight: pdfWid.FontWeight.bold)),
                   pdfWid.Text("Follow on Medium, LinkedIn, GitHub",

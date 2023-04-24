@@ -117,8 +117,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:
-          customAppBar("Flutter 30 Tips\nwith\nLakshydeep Vikram", back: false),
+      appBar: customAppBar("Flutter 30 Tips", back: false),
       body:
           //  UserList(
           //   tips: "4",

@@ -21,17 +21,10 @@ class _WebViewWidState extends State<WebViewWid> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             _wid(
-                url: "https://lakshydeep-14.medium.com",
-                label: "Medium",
-                icon: FontAwesomeIcons.medium),
-            _wid(
-                url: "https://linkedin.com/in/lakshydeep-14",
+                url: "https:",
                 label: "LinkedIN",
                 icon: FontAwesomeIcons.linkedin),
-            _wid(
-                url: "https://github.com/lakshydeep-14",
-                label: "GitHub",
-                icon: FontAwesomeIcons.github),
+            _wid(url: "https:", label: "GitHub", icon: FontAwesomeIcons.github),
           ],
         ));
   }

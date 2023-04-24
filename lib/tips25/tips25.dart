@@ -48,7 +48,7 @@ class _DropDownWithSearchState extends State<DropDownWithSearch> {
   TextEditingController searchController = TextEditingController();
   final List<String> _list = [
     "Follow",
-    "lakshydeep-14",
+    "kundan kumar",
     "on",
     "Github",
     "Medium",

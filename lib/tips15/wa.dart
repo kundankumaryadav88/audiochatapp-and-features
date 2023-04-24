@@ -16,11 +16,10 @@ class WhatsAppChat extends StatefulWidget {
 
 class _WhatsAppChatState extends State<WhatsAppChat> {
   //edit groupLink and numberWithCode firsr
-  String groupLink = ""; //https://chat.whatsapp.com/HMudsgtHEzS7xLmHrN8El/
-  String numberWithCode = ""; //https://wa.me/9779812345678/
+  String groupLink = "";
+  String numberWithCode = "";
   void wa(String host) async {
-    Uri url =
-        Uri.parse("$host?text=Follow 30FlutterTips With Lakshydeep Vikram");
+    Uri url = Uri.parse("$host?text=Follow 30FlutterTips With kundan kumar");
     if (await canLaunchUrl(url)) {
       await launchUrl(
         url,

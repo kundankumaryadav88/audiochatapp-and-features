@@ -37,18 +37,18 @@ class _ZoomWidState extends State<ZoomWid> {
                 style: context.text.headline1,
               ),
               Text(
-                " #30FlutterTipsWithLakshydeepVikram",
+                " #30FlutterTipsWithkundankumar",
                 style: context.text.headline1!
                     .copyWith(fontFamily: GoogleFonts.poppins().fontFamily),
               ),
               Text(
-                " #30FlutterTipsWithLakshydeepVikram",
+                " #30FlutterTipsWithkundankumar",
                 style: context.text.headline3!.copyWith(
                     color: mainColor.withOpacity(0.89),
                     fontFamily: GoogleFonts.sansita().fontFamily),
               ),
               Text(
-                " #30FlutterTipsWithLakshydeepVikram",
+                " #30FlutterTipsWithkundankumar",
                 style: context.text.headline4,
               ),
               Text(
@@ -71,7 +71,7 @@ class _ZoomWidState extends State<ZoomWid> {
                     .copyWith(fontFamily: GoogleFonts.newTegomin().fontFamily),
               ),
               Text(
-                " @lakshydeep-14",
+                " Kundan kumar",
                 style: context.text.headline4!
                     .copyWith(fontFamily: GoogleFonts.newTegomin().fontFamily),
               ),

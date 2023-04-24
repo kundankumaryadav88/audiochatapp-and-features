@@ -115,7 +115,7 @@ class _StepprWidState extends State<StepprWid> {
             Step(
                 isActive: index >= 1,
                 title: SizedBox.shrink(),
-                content: _steps("#30flutterTips\n&\n@lakshydeep-14")),
+                content: _steps("#30flutterTips\nKundan kumar")),
             Step(
                 isActive: index >= 2,
                 title: SizedBox.shrink(),
