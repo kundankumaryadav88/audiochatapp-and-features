@@ -18,7 +18,13 @@ import 'package:audiochatapp/tips21/crearefolder.dart';
 import 'package:audiochatapp/tips22/write_files.dart';
 import 'package:audiochatapp/tips23/tips23.dart';
 import 'package:audiochatapp/tips24/shimmer_effect.dart';
+import 'package:audiochatapp/tips25/tips25.dart';
 import 'package:audiochatapp/tips26/tips26.dart';
+import 'package:audiochatapp/tips27/tips27.dart';
+import 'package:audiochatapp/tips28/tips28.dart';
+import 'package:audiochatapp/tips29/tips29.dart';
+import 'package:audiochatapp/tips30/tips30.dart';
+import 'package:audiochatapp/tips31/tips31.dart';
 import 'package:audiochatapp/tips5/online.dart';
 import 'package:audiochatapp/tips6/searchSuggestion.dart';
 import 'package:audiochatapp/tips7/textformValidation.dart';
@@ -26,7 +32,7 @@ import 'package:audiochatapp/tips8/showCase.dart';
 import 'package:audiochatapp/tips9/webView.dart';
 import 'package:get/get.dart';
 
-final Color mainColor = Color.fromARGB(255, 5, 172, 97);
+final Color mainColor = Color.fromARGB(255, 5, 143, 97);
 bool isDarkTheme = false;
 
 final List<TIPS> tipsList = [
@@ -85,6 +91,19 @@ final List<TIPS> tipsList = [
       go: WriteFileScreen()),
   TIPS(label: "23", title: "Rotation In Flutter", go: Tips23()),
   TIPS(label: "24", title: "Shimmer Effect In Flutter", go: ShimmerEffect()),
+  TIPS(label: "25", title: "Searchable DropDown In Flutter", go: Tips25()),
+  TIPS(
+      label: "26",
+      title: "Move Widget Up When Keyboard Appears In Flutter",
+      go: Tips26()),
+  TIPS(label: "27", title: "Pie Chart and Bar Graph In Flutter", go: Tips27()),
+  TIPS(label: "28", title: "Numeral System In Flutter", go: Tips28()),
+  TIPS(label: "29", title: "Pagination In Flutter", go: Tips29()),
+  TIPS(
+      label: "30",
+      title: "Persistant Bottom Navigation Bar In Flutter",
+      go: Tips30()),
+  TIPS(label: "31", title: "Fetch Images from Firebase Storage", go: Tips31()),
 ];
 
 class Home extends StatefulWidget {
@@ -98,24 +117,26 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: customAppBar("Chatting App", back: false),
-        body: UserList(
-          tips: "4",
-        )
-        //     ListView.separated(
-        //   itemCount: tipsList.length,
-        //   itemBuilder: (_, i) {
-        //     return tips(tipsList[i].label!, tipsList[i].title!, tipsList[i].go!);
-        //   },
-        //   separatorBuilder: (_, i) {
-        //     return Container(
-        //       width: double.infinity,
-        //       height: 2,
-        //       color: mainColor.withOpacity(0.1),
-        //     );
-        //   },
-        // ),
-        );
+      appBar:
+          customAppBar("Flutter 30 Tips\nwith\nLakshydeep Vikram", back: false),
+      body:
+          //  UserList(
+          //   tips: "4",
+          // )
+          ListView.separated(
+        itemCount: tipsList.length,
+        itemBuilder: (_, i) {
+          return tips(tipsList[i].label!, tipsList[i].title!, tipsList[i].go!);
+        },
+        separatorBuilder: (_, i) {
+          return Container(
+            width: double.infinity,
+            height: 2,
+            color: mainColor.withOpacity(0.1),
+          );
+        },
+      ),
+    );
   }
 
   Widget tips(String label, String title, Widget go) {

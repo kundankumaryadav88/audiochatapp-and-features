@@ -38,120 +38,128 @@ class _UserListState extends State<UserList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // appBar: customAppBar("Tips 2"),
+        appBar: customAppBar("Tips 2"),
         body: SafeArea(
             child: Padding(
-      padding: const EdgeInsets.all(18.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            "UserList",
-            style: TextStyle(
-                fontSize: 25, fontWeight: FontWeight.bold, color: Colors.black),
-          ),
-          Expanded(
-            child: StreamBuilder<List<QueryDocumentSnapshot<Object?>>>(
-              stream: _stream(),
-              builder: (context, snapshot) {
-                if (!snapshot.hasData) {
-                  return Center(
-                    child: CircularProgressIndicator(),
-                  );
-                } else {
-                  return snapshot.data!.isEmpty
-                      ? Center(
-                          child: Text("No Data"),
-                        )
-                      : ListView.builder(
-                          padding: EdgeInsets.all(10.0),
-                          itemBuilder: (context, index) {
-                            if (snapshot.data![index] == null) {
-                              return SizedBox();
-                            } else {
-                              return GestureDetector(
-                                onTap: () async {
-                                  await Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (context) => widget.tips == "2"
-                                          ? ChatDetailPage(
-                                              data: snapshot.data![index],
-                                            )
-                                          : widget.tips == "4"
-                                              ? VoiceChat(
+          padding: const EdgeInsets.all(18.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "UserList",
+                style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
+              ),
+              Expanded(
+                child: StreamBuilder<List<QueryDocumentSnapshot<Object?>>>(
+                  stream: _stream(),
+                  builder: (context, snapshot) {
+                    if (!snapshot.hasData) {
+                      return Center(
+                        child: CircularProgressIndicator(),
+                      );
+                    } else {
+                      return snapshot.data!.isEmpty
+                          ? Center(
+                              child: Text("No Data"),
+                            )
+                          : ListView.builder(
+                              padding: EdgeInsets.all(10.0),
+                              itemBuilder: (context, index) {
+                                if (snapshot.data![index] == null) {
+                                  return SizedBox();
+                                } else {
+                                  return GestureDetector(
+                                    onTap: () async {
+                                      await Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                          builder: (context) => widget.tips ==
+                                                  "2"
+                                              ? ChatDetailPage(
                                                   data: snapshot.data![index],
                                                 )
-                                              : ImageChat(
-                                                  data: snapshot.data![index],
-                                                ),
-                                    ),
-                                  );
-                                },
-                                child: Container(
-                                    color: ThemeData().scaffoldBackgroundColor,
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Row(
+                                              : widget.tips == "4"
+                                                  ? VoiceChat(
+                                                      data:
+                                                          snapshot.data![index],
+                                                    )
+                                                  : ImageChat(
+                                                      data:
+                                                          snapshot.data![index],
+                                                    ),
+                                        ),
+                                      );
+                                    },
+                                    child: Container(
+                                        color:
+                                            ThemeData().scaffoldBackgroundColor,
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Row(
                                           mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
+                                              MainAxisAlignment.spaceBetween,
                                           children: [
-                                            Icon(
-                                              Icons.account_circle,
-                                              size: 50,
-                                            ),
-                                            SizedBox(
-                                              width: 10,
-                                            ),
-                                            Column(
+                                            Row(
                                               mainAxisAlignment:
                                                   MainAxisAlignment.start,
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.start,
                                               children: [
-                                                Text(
-                                                  snapshot.data![index]["name"],
-                                                  style: TextStyle(
-                                                      color: Colors.black,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontSize: 13),
+                                                Icon(
+                                                  Icons.account_circle,
+                                                  size: 50,
                                                 ),
-                                                Text(
-                                                  snapshot.data![index].id
-                                                      .toString(),
-                                                  style: TextStyle(
-                                                      color: Colors.grey,
-                                                      fontSize: 12),
+                                                SizedBox(
+                                                  width: 10,
+                                                ),
+                                                Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.start,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      snapshot.data![index]
+                                                          ["name"],
+                                                      style: TextStyle(
+                                                          color: Colors.black,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          fontSize: 13),
+                                                    ),
+                                                    Text(
+                                                      snapshot.data![index].id
+                                                          .toString(),
+                                                      style: TextStyle(
+                                                          color: Colors.grey,
+                                                          fontSize: 12),
+                                                    ),
+                                                  ],
                                                 ),
                                               ],
                                             ),
+                                            Text(
+                                              "",
+                                              style:
+                                                  TextStyle(color: Colors.grey),
+                                            ),
                                           ],
-                                        ),
-                                        Text(
-                                          "",
-                                          style: TextStyle(color: Colors.grey),
-                                        ),
-                                      ],
-                                    )),
-                              );
-                            }
-                            ;
-                          },
-                          itemCount: snapshot.data!.length,
-                        );
-                }
-              },
-            ),
+                                        )),
+                                  );
+                                }
+                                ;
+                              },
+                              itemCount: snapshot.data!.length,
+                            );
+                    }
+                  },
+                ),
+              ),
+            ],
           ),
-        ],
-      ),
-    )));
+        )));
   }
 }
 

@@ -94,7 +94,7 @@ class _DropDownWithSearchState extends State<DropDownWithSearch> {
                     ),
                   )
                 ],
-                isExpanded: false,
+                //isExpanded: false,
 
                 buttonElevation: 0,
                 searchController: searchController,
